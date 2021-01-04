@@ -1,0 +1,3 @@
+/home/amirhosein/Documents/Dev/Game/Checkers/build/CMakeFiles/rebuild_cache.dir
+/home/amirhosein/Documents/Dev/Game/Checkers/build/CMakeFiles/edit_cache.dir
+/home/amirhosein/Documents/Dev/Game/Checkers/build/CMakeFiles/checkers.dir
