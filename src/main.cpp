@@ -1,37 +1,32 @@
 #include "core/Engine.hpp"
 
+void func()
+{
+    
+}
+
 int main(int argc, char *argv[])
 {
     Engine *engine = Engine::getInstance();
 
     if (engine->initialize())
     {
-        if (engine->loadMedia())
-        {
             Uint32 frameTicks;
-            while (true)
+            engine->mainTimer->start();
+            while (Engine::running)
             {
-                Engine::timer->start();
+                engine->manageStates();
+                engine->frameTimer->start();
                 engine->update();
                 engine->render();
-                
-                if (engine->shouldClose())
-                {
-                    break;
-                }
 
-                frameTicks = Engine::timer->getTicks();
+                frameTicks = engine->frameTimer->getTicks();
                 if (frameTicks < totalTicksForEachFrame)
                 {
-                    std::cerr << "A";
                     SDL_Delay(totalTicksForEachFrame - frameTicks);
                 }
             }
-        }
-        else
-        {
-            System::logError("engine : couldn't load media!");
-        }
+            engine->deleteObjectsTillNow();
     }
     else
     {

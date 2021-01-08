@@ -16,14 +16,19 @@ Object::Object(Vector position, SDL_Renderer *renderer, TTF_Font *font)
         Object::font = font;
     }
     this->texture = nullptr;
+    this->clip = nullptr;
     this->width = 0;
     this->height = 0;
     this->position.x = position.x;
     this->position.y = position.y;
+    this->destinationAlpha = 0;
     this->velocity.x = 0;
     this->velocity.y = 0;
     this->acceleration.x = 0;
     this->acceleration.y = 0;
+    this->alpha = 255;
+    this->alphaPerSecond = 0;
+    this->reverseLoop = false;
 }
 
 Object::~Object()
@@ -60,7 +65,7 @@ bool Object::loadFromFile(const std::string &path)
     return true;
 }
 
-bool Object::loadFromRenderedText(std::string textureText, SDL_Color textColor)
+bool Object::loadFromRenderedText(const std::string &textureText, SDL_Color textColor)
 {
     Object::free(this);
     SDL_Surface *surface = TTF_RenderText_Solid(Object::font, textureText.c_str(), textColor);
@@ -97,31 +102,44 @@ void Object::loadFromOtherObject(Object *object)
     this->texture = object->texture;
 }
 
+void Object::setClip(SDL_Rect *clip)
+{
+    this->clip = clip;
+    this->width = clip->w;
+    this->height = clip->h;
+}
+
 void Object::setVelocity(Vector velocity)
 {
     this->velocity.x = velocity.x;
     this->velocity.y = velocity.y;
 }
 
-void Object::setAcceleration(Vector acceleration)
+void Object::setPosition(float x, float y)
 {
-
+    if (!(x < 0 && y < 0))
+    {
+        this->position.x = x;
+        this->position.y = y;
+    }
 }
 
 void Object::setAlpha(Uint8 alpha)
 {
-    SDL_SetTextureAlphaMod(this->texture, alpha);
+    this->alpha = alpha;
 }
 
 void Object::updatePhysics(Object *object)
 {
-    if (object->velocity.x < 0)
+    if (object->position.x < 0)
     {
+        object->position.x = 0;
         object->acceleration.x = 0;
         object->velocity.x = 0;
     }
-    if (object->velocity.y < 0)
+    if (object->position.y < 0)
     {
+        object->position.y = 0;
         object->acceleration.y = 0;
         object->velocity.y = 0;
     }
@@ -129,6 +147,21 @@ void Object::updatePhysics(Object *object)
     {
         object->velocity.x = 0;
         object->velocity.y = 0;
+    }
+    if (object->alpha == 252 || object->alpha == 252 || object->alpha == object->destinationAlpha)
+    {
+        if (object->reverseLoop)
+        {
+            object->alphaPerSecond = -object->alphaPerSecond;
+            object->destinationAlpha = 255 - object->destinationAlpha;
+        }
+        else
+        {
+            if (object->alphaPerSecond != 0)
+            {
+                object->alphaPerSecond = 0;
+            }
+        }
     }
 }
 
@@ -138,16 +171,22 @@ void Object::free(Object *object)
     {
         SDL_DestroyTexture(object->texture);
         object->texture = nullptr;
+        delete object->clip;
+        object->clip = nullptr;
         object->width = 0;
         object->height = 0;
         object->velocity.x = 0;
         object->velocity.y = 0;
+        object->destinationAlpha = 0;
         object->acceleration.x = 0;
         object->acceleration.y = 0;
+        object->alpha = 0;
+        object->alphaPerSecond = 0;
+        object->reverseLoop = false;
     }
 }
 
-void Object::render(int delta, SDL_Rect *clip, int width, int height)
+void Object::render(int delta)
 {
     SDL_Rect textureQuad;
     if (delta == 0)
@@ -157,8 +196,9 @@ void Object::render(int delta, SDL_Rect *clip, int width, int height)
 
     this->position.x += (this->velocity.x) * delta / SCREEN_FPS;
     this->position.y += (this->velocity.y) * delta / SCREEN_FPS;
+    this->alpha += (this->alphaPerSecond) * delta / SCREEN_FPS;
 
-    if (clip == NULL)
+    if (this->clip == nullptr)
     {
         textureQuad = {(int) this->position.x, (int) this->position.y, this->width, this->height};
     }
@@ -167,10 +207,7 @@ void Object::render(int delta, SDL_Rect *clip, int width, int height)
         textureQuad = {(int) this->position.x, (int) this->position.y, clip->w, clip->h};
     }
 
-    if (width != 0 && height != 0)
-    {
-        textureQuad = {(int) this->position.x, (int) this->position.y, width, height};
-    }
+    SDL_SetTextureAlphaMod(this->texture, alpha);
 
     SDL_RenderCopy(this->renderer, this->texture, clip, &textureQuad);
 }
@@ -189,9 +226,16 @@ void Object::animate(Vector position, int duration)
 
     this->destination.x = position.x;
     this->destination.y = position.y;
+}
 
-    // this->acceleration.x = 0.1;
-    // this->acceleration.y = 0.1;
+void Object::animate(Uint8 alpha, int duration, bool reverseLoop)
+{
+    if (this->alpha != alpha)
+    {
+        this->alphaPerSecond = (alpha - this->alpha) / duration;
+    }
+    this->destinationAlpha = alpha;
+    this->reverseLoop = reverseLoop;
 }
 
 int Object::getWidth()

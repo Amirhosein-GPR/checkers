@@ -6,23 +6,38 @@
 #include "objects/RedPiece.hpp"
 #include "objects/BluePiece.hpp"
 
+enum GameStateMachine
+{
+    GAME_STATE_INTRO,
+    GAME_STATE_INPUT,
+    GAME_STATE_GAME,
+    GAME_STATE_OUTRO,
+    GAME_STATE_EXIT
+};
+
 class Engine
 {
     public:
         static Engine * getInstance();
         bool initialize();
-        bool loadMedia();
-        
+        void runThenGo(void (*function)(), Uint32 goToNextInThisTime, GameStateMachine gameState, bool lilimtedTime = true);
+        static void loadIntro();
+        static void loadNameInput();
+        static void loadMainGame();
+        static void loadOutro();
+        static void exitTheGame();
+        void manageStates();
+        void deleteObjectsTillNow();
         void update();
         void render();
-        bool shouldClose();
-        static Timer *timer;
+        Timer *frameTimer;
+        Timer *mainTimer;
+        GameStateMachine gameState;
+        bool firstMediaLoad;
+        static bool running;
     private:
         Engine();
         ~Engine();
-        void loadAndShowIntro();
-        void loadAndShowNameInput();
-        void loadAndShowMainObjects();
         static Engine *instance;
         static SDL_Window *window;
         static SDL_Renderer *renderer;
@@ -30,7 +45,11 @@ class Engine
         static std::vector<Object *> objects;
         static TTF_Font *font;
         static std::vector<Object *>::iterator objectsIterator;
-        static bool close;
+        static std::string username;
+        static bool usernameSholudUpdate;
+        static int usernameIndex;
+        static void appendInputText(const char &character);
+        static void backspaceInputText();
 };
 
 #endif
