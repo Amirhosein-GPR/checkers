@@ -377,7 +377,7 @@ void Engine::manageStates()
     switch (Engine::gameState)
     {
         case GAME_STATE_INTRO:
-            Engine::runThenGo(Engine::loadIntro, 1000, GAME_STATE_INPUT);
+            Engine::runThenGo(Engine::loadIntro, 5000, GAME_STATE_INPUT);
         break;
         case GAME_STATE_INPUT:
             Engine::runThenGo(Engine::loadNameInput, 0, GAME_STATE_GAME, false);
