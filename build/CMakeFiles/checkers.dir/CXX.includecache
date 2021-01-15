@@ -11,10 +11,14 @@ core/System.hpp
 ../include/core/core/System.hpp
 core/Object.hpp
 ../include/core/core/Object.hpp
+objects/Piece.hpp
+../include/core/objects/Piece.hpp
 objects/RedPiece.hpp
 ../include/core/objects/RedPiece.hpp
 objects/BluePiece.hpp
 ../include/core/objects/BluePiece.hpp
+objects/Selector.hpp
+../include/core/objects/Selector.hpp
 
 ../include/core/Object.hpp
 System.hpp
@@ -43,10 +47,18 @@ SDL2/SDL.h
 -
 
 ../include/objects/BluePiece.hpp
+objects/Piece.hpp
+../include/objects/objects/Piece.hpp
+
+../include/objects/Piece.hpp
 core/Object.hpp
 ../include/objects/core/Object.hpp
 
 ../include/objects/RedPiece.hpp
+objects/Piece.hpp
+../include/objects/objects/Piece.hpp
+
+../include/objects/Selector.hpp
 core/Object.hpp
 ../include/objects/core/Object.hpp
 

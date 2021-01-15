@@ -6,7 +6,9 @@ CMakeFiles/checkers.dir/src/core/Engine.cpp.o: ../include/core/Object.hpp
 CMakeFiles/checkers.dir/src/core/Engine.cpp.o: ../include/core/System.hpp
 CMakeFiles/checkers.dir/src/core/Engine.cpp.o: ../include/core/Timer.hpp
 CMakeFiles/checkers.dir/src/core/Engine.cpp.o: ../include/objects/BluePiece.hpp
+CMakeFiles/checkers.dir/src/core/Engine.cpp.o: ../include/objects/Piece.hpp
 CMakeFiles/checkers.dir/src/core/Engine.cpp.o: ../include/objects/RedPiece.hpp
+CMakeFiles/checkers.dir/src/core/Engine.cpp.o: ../include/objects/Selector.hpp
 CMakeFiles/checkers.dir/src/core/Engine.cpp.o: ../src/core/Engine.cpp
 
 CMakeFiles/checkers.dir/src/core/Object.cpp.o: ../include/core/Object.hpp
@@ -26,18 +28,34 @@ CMakeFiles/checkers.dir/src/main.cpp.o: ../include/core/Object.hpp
 CMakeFiles/checkers.dir/src/main.cpp.o: ../include/core/System.hpp
 CMakeFiles/checkers.dir/src/main.cpp.o: ../include/core/Timer.hpp
 CMakeFiles/checkers.dir/src/main.cpp.o: ../include/objects/BluePiece.hpp
+CMakeFiles/checkers.dir/src/main.cpp.o: ../include/objects/Piece.hpp
 CMakeFiles/checkers.dir/src/main.cpp.o: ../include/objects/RedPiece.hpp
+CMakeFiles/checkers.dir/src/main.cpp.o: ../include/objects/Selector.hpp
 CMakeFiles/checkers.dir/src/main.cpp.o: ../src/main.cpp
 
 CMakeFiles/checkers.dir/src/objects/BluePiece.cpp.o: ../include/core/Object.hpp
 CMakeFiles/checkers.dir/src/objects/BluePiece.cpp.o: ../include/core/System.hpp
 CMakeFiles/checkers.dir/src/objects/BluePiece.cpp.o: ../include/core/Timer.hpp
 CMakeFiles/checkers.dir/src/objects/BluePiece.cpp.o: ../include/objects/BluePiece.hpp
+CMakeFiles/checkers.dir/src/objects/BluePiece.cpp.o: ../include/objects/Piece.hpp
 CMakeFiles/checkers.dir/src/objects/BluePiece.cpp.o: ../src/objects/BluePiece.cpp
+
+CMakeFiles/checkers.dir/src/objects/Piece.cpp.o: ../include/core/Object.hpp
+CMakeFiles/checkers.dir/src/objects/Piece.cpp.o: ../include/core/System.hpp
+CMakeFiles/checkers.dir/src/objects/Piece.cpp.o: ../include/core/Timer.hpp
+CMakeFiles/checkers.dir/src/objects/Piece.cpp.o: ../include/objects/Piece.hpp
+CMakeFiles/checkers.dir/src/objects/Piece.cpp.o: ../src/objects/Piece.cpp
 
 CMakeFiles/checkers.dir/src/objects/RedPiece.cpp.o: ../include/core/Object.hpp
 CMakeFiles/checkers.dir/src/objects/RedPiece.cpp.o: ../include/core/System.hpp
 CMakeFiles/checkers.dir/src/objects/RedPiece.cpp.o: ../include/core/Timer.hpp
+CMakeFiles/checkers.dir/src/objects/RedPiece.cpp.o: ../include/objects/Piece.hpp
 CMakeFiles/checkers.dir/src/objects/RedPiece.cpp.o: ../include/objects/RedPiece.hpp
 CMakeFiles/checkers.dir/src/objects/RedPiece.cpp.o: ../src/objects/RedPiece.cpp
+
+CMakeFiles/checkers.dir/src/objects/Selector.cpp.o: ../include/core/Object.hpp
+CMakeFiles/checkers.dir/src/objects/Selector.cpp.o: ../include/core/System.hpp
+CMakeFiles/checkers.dir/src/objects/Selector.cpp.o: ../include/core/Timer.hpp
+CMakeFiles/checkers.dir/src/objects/Selector.cpp.o: ../include/objects/Selector.hpp
+CMakeFiles/checkers.dir/src/objects/Selector.cpp.o: ../src/objects/Selector.cpp
 

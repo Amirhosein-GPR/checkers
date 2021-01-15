@@ -7,7 +7,9 @@ CMakeFiles/checkers.dir/src/core/Engine.cpp.o
  ../include/core/System.hpp
  ../include/core/Timer.hpp
  ../include/objects/BluePiece.hpp
+ ../include/objects/Piece.hpp
  ../include/objects/RedPiece.hpp
+ ../include/objects/Selector.hpp
  /home/amirhosein/Documents/Dev/Game/Checkers/src/core/Engine.cpp
 CMakeFiles/checkers.dir/src/core/Object.cpp.o
  ../include/core/Object.hpp
@@ -27,17 +29,33 @@ CMakeFiles/checkers.dir/src/main.cpp.o
  ../include/core/System.hpp
  ../include/core/Timer.hpp
  ../include/objects/BluePiece.hpp
+ ../include/objects/Piece.hpp
  ../include/objects/RedPiece.hpp
+ ../include/objects/Selector.hpp
  /home/amirhosein/Documents/Dev/Game/Checkers/src/main.cpp
 CMakeFiles/checkers.dir/src/objects/BluePiece.cpp.o
  ../include/core/Object.hpp
  ../include/core/System.hpp
  ../include/core/Timer.hpp
  ../include/objects/BluePiece.hpp
+ ../include/objects/Piece.hpp
  /home/amirhosein/Documents/Dev/Game/Checkers/src/objects/BluePiece.cpp
+CMakeFiles/checkers.dir/src/objects/Piece.cpp.o
+ ../include/core/Object.hpp
+ ../include/core/System.hpp
+ ../include/core/Timer.hpp
+ ../include/objects/Piece.hpp
+ /home/amirhosein/Documents/Dev/Game/Checkers/src/objects/Piece.cpp
 CMakeFiles/checkers.dir/src/objects/RedPiece.cpp.o
  ../include/core/Object.hpp
  ../include/core/System.hpp
  ../include/core/Timer.hpp
+ ../include/objects/Piece.hpp
  ../include/objects/RedPiece.hpp
  /home/amirhosein/Documents/Dev/Game/Checkers/src/objects/RedPiece.cpp
+CMakeFiles/checkers.dir/src/objects/Selector.cpp.o
+ ../include/core/Object.hpp
+ ../include/core/System.hpp
+ ../include/core/Timer.hpp
+ ../include/objects/Selector.hpp
+ /home/amirhosein/Documents/Dev/Game/Checkers/src/objects/Selector.cpp

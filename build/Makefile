@@ -304,6 +304,33 @@ src/objects/BluePiece.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/checkers.dir/build.make CMakeFiles/checkers.dir/src/objects/BluePiece.cpp.s
 .PHONY : src/objects/BluePiece.cpp.s
 
+src/objects/Piece.o: src/objects/Piece.cpp.o
+
+.PHONY : src/objects/Piece.o
+
+# target to build an object file
+src/objects/Piece.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/checkers.dir/build.make CMakeFiles/checkers.dir/src/objects/Piece.cpp.o
+.PHONY : src/objects/Piece.cpp.o
+
+src/objects/Piece.i: src/objects/Piece.cpp.i
+
+.PHONY : src/objects/Piece.i
+
+# target to preprocess a source file
+src/objects/Piece.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/checkers.dir/build.make CMakeFiles/checkers.dir/src/objects/Piece.cpp.i
+.PHONY : src/objects/Piece.cpp.i
+
+src/objects/Piece.s: src/objects/Piece.cpp.s
+
+.PHONY : src/objects/Piece.s
+
+# target to generate assembly for a file
+src/objects/Piece.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/checkers.dir/build.make CMakeFiles/checkers.dir/src/objects/Piece.cpp.s
+.PHONY : src/objects/Piece.cpp.s
+
 src/objects/RedPiece.o: src/objects/RedPiece.cpp.o
 
 .PHONY : src/objects/RedPiece.o
@@ -330,6 +357,33 @@ src/objects/RedPiece.s: src/objects/RedPiece.cpp.s
 src/objects/RedPiece.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/checkers.dir/build.make CMakeFiles/checkers.dir/src/objects/RedPiece.cpp.s
 .PHONY : src/objects/RedPiece.cpp.s
+
+src/objects/Selector.o: src/objects/Selector.cpp.o
+
+.PHONY : src/objects/Selector.o
+
+# target to build an object file
+src/objects/Selector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/checkers.dir/build.make CMakeFiles/checkers.dir/src/objects/Selector.cpp.o
+.PHONY : src/objects/Selector.cpp.o
+
+src/objects/Selector.i: src/objects/Selector.cpp.i
+
+.PHONY : src/objects/Selector.i
+
+# target to preprocess a source file
+src/objects/Selector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/checkers.dir/build.make CMakeFiles/checkers.dir/src/objects/Selector.cpp.i
+.PHONY : src/objects/Selector.cpp.i
+
+src/objects/Selector.s: src/objects/Selector.cpp.s
+
+.PHONY : src/objects/Selector.s
+
+# target to generate assembly for a file
+src/objects/Selector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/checkers.dir/build.make CMakeFiles/checkers.dir/src/objects/Selector.cpp.s
+.PHONY : src/objects/Selector.cpp.s
 
 # Help Target
 help:
@@ -358,9 +412,15 @@ help:
 	@echo "... src/objects/BluePiece.o"
 	@echo "... src/objects/BluePiece.i"
 	@echo "... src/objects/BluePiece.s"
+	@echo "... src/objects/Piece.o"
+	@echo "... src/objects/Piece.i"
+	@echo "... src/objects/Piece.s"
 	@echo "... src/objects/RedPiece.o"
 	@echo "... src/objects/RedPiece.i"
 	@echo "... src/objects/RedPiece.s"
+	@echo "... src/objects/Selector.o"
+	@echo "... src/objects/Selector.i"
+	@echo "... src/objects/Selector.s"
 .PHONY : help
 
 

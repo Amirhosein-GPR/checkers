@@ -129,6 +129,41 @@ void Object::setAlpha(Uint8 alpha)
     this->alpha = alpha;
 }
 
+void Object::setBlockPosition(Uint8 blockPosition)
+{
+    Vector realPosition = this->getPositionEquvalant(blockPosition);
+    if (realPosition.x != -1)
+    {
+        this->setPosition(realPosition.x, realPosition.y);
+        this->blockPosition = blockPosition;
+    }
+}
+
+Vector Object::getPositionEquvalant(Uint8 inputBlockPostion)
+{
+    int x = 632;
+    int y = 72;
+    if (inputBlockPostion > -1 && inputBlockPostion < 64)
+    {
+        int row = inputBlockPostion / 8;
+        int column = inputBlockPostion % 8;
+        if (this->getHeight() == 72 || this->getWidth() == 72)
+        {
+            return Vector(x + 72 * (column), y + 72 * (row));
+        }
+        else
+        {
+            return Vector(x + 72 * column + this->getHeight() / 2 + 4, y + 72 * row + this->getHeight() / 2 + 4);
+        }
+    }
+    return Vector(-1, -1);
+}
+
+Uint8 Object::getBlockPosition()
+{
+    return this->blockPosition;
+}
+
 void Object::updatePhysics(Object *object)
 {
     if (object->position.x < 0)
@@ -226,6 +261,16 @@ void Object::animate(Vector position, int duration)
 
     this->destination.x = position.x;
     this->destination.y = position.y;
+}
+
+void Object::animateBlockPosition(int blockPosition, int duration)
+{
+    Vector realPosition = this->getPositionEquvalant(blockPosition);
+    if (realPosition.x != -1)
+    {
+        this->animate(realPosition, duration);
+        this->blockPosition = blockPosition;
+    }
 }
 
 void Object::animate(Uint8 alpha, int duration, bool reverseLoop)

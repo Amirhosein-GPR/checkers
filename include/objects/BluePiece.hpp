@@ -1,9 +1,9 @@
 #ifndef BLUEPIECE_HPP
 #define BLUEPIECE_HPP
 
-#include "core/Object.hpp"
+#include "objects/Piece.hpp"
 
-class BluePiece : public Object
+class BluePiece : public Piece
 {
     public:
         BluePiece(Vector position, SDL_Renderer *renderer = nullptr, TTF_Font *font = nullptr);

@@ -141,9 +141,22 @@ CMakeFiles/checkers.dir/src/core/Timer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/checkers.dir/src/core/Timer.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amirhosein/Documents/Dev/Game/Checkers/src/core/Timer.cpp -o CMakeFiles/checkers.dir/src/core/Timer.cpp.s
 
+CMakeFiles/checkers.dir/src/objects/Piece.cpp.o: CMakeFiles/checkers.dir/flags.make
+CMakeFiles/checkers.dir/src/objects/Piece.cpp.o: ../src/objects/Piece.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amirhosein/Documents/Dev/Game/Checkers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/checkers.dir/src/objects/Piece.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/checkers.dir/src/objects/Piece.cpp.o -c /home/amirhosein/Documents/Dev/Game/Checkers/src/objects/Piece.cpp
+
+CMakeFiles/checkers.dir/src/objects/Piece.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/checkers.dir/src/objects/Piece.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amirhosein/Documents/Dev/Game/Checkers/src/objects/Piece.cpp > CMakeFiles/checkers.dir/src/objects/Piece.cpp.i
+
+CMakeFiles/checkers.dir/src/objects/Piece.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/checkers.dir/src/objects/Piece.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amirhosein/Documents/Dev/Game/Checkers/src/objects/Piece.cpp -o CMakeFiles/checkers.dir/src/objects/Piece.cpp.s
+
 CMakeFiles/checkers.dir/src/objects/BluePiece.cpp.o: CMakeFiles/checkers.dir/flags.make
 CMakeFiles/checkers.dir/src/objects/BluePiece.cpp.o: ../src/objects/BluePiece.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amirhosein/Documents/Dev/Game/Checkers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/checkers.dir/src/objects/BluePiece.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amirhosein/Documents/Dev/Game/Checkers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/checkers.dir/src/objects/BluePiece.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/checkers.dir/src/objects/BluePiece.cpp.o -c /home/amirhosein/Documents/Dev/Game/Checkers/src/objects/BluePiece.cpp
 
 CMakeFiles/checkers.dir/src/objects/BluePiece.cpp.i: cmake_force
@@ -156,7 +169,7 @@ CMakeFiles/checkers.dir/src/objects/BluePiece.cpp.s: cmake_force
 
 CMakeFiles/checkers.dir/src/objects/RedPiece.cpp.o: CMakeFiles/checkers.dir/flags.make
 CMakeFiles/checkers.dir/src/objects/RedPiece.cpp.o: ../src/objects/RedPiece.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amirhosein/Documents/Dev/Game/Checkers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/checkers.dir/src/objects/RedPiece.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amirhosein/Documents/Dev/Game/Checkers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/checkers.dir/src/objects/RedPiece.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/checkers.dir/src/objects/RedPiece.cpp.o -c /home/amirhosein/Documents/Dev/Game/Checkers/src/objects/RedPiece.cpp
 
 CMakeFiles/checkers.dir/src/objects/RedPiece.cpp.i: cmake_force
@@ -167,6 +180,19 @@ CMakeFiles/checkers.dir/src/objects/RedPiece.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/checkers.dir/src/objects/RedPiece.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amirhosein/Documents/Dev/Game/Checkers/src/objects/RedPiece.cpp -o CMakeFiles/checkers.dir/src/objects/RedPiece.cpp.s
 
+CMakeFiles/checkers.dir/src/objects/Selector.cpp.o: CMakeFiles/checkers.dir/flags.make
+CMakeFiles/checkers.dir/src/objects/Selector.cpp.o: ../src/objects/Selector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amirhosein/Documents/Dev/Game/Checkers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/checkers.dir/src/objects/Selector.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/checkers.dir/src/objects/Selector.cpp.o -c /home/amirhosein/Documents/Dev/Game/Checkers/src/objects/Selector.cpp
+
+CMakeFiles/checkers.dir/src/objects/Selector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/checkers.dir/src/objects/Selector.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/amirhosein/Documents/Dev/Game/Checkers/src/objects/Selector.cpp > CMakeFiles/checkers.dir/src/objects/Selector.cpp.i
+
+CMakeFiles/checkers.dir/src/objects/Selector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/checkers.dir/src/objects/Selector.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/amirhosein/Documents/Dev/Game/Checkers/src/objects/Selector.cpp -o CMakeFiles/checkers.dir/src/objects/Selector.cpp.s
+
 # Object files for target checkers
 checkers_OBJECTS = \
 "CMakeFiles/checkers.dir/src/main.cpp.o" \
@@ -174,8 +200,10 @@ checkers_OBJECTS = \
 "CMakeFiles/checkers.dir/src/core/Object.cpp.o" \
 "CMakeFiles/checkers.dir/src/core/System.cpp.o" \
 "CMakeFiles/checkers.dir/src/core/Timer.cpp.o" \
+"CMakeFiles/checkers.dir/src/objects/Piece.cpp.o" \
 "CMakeFiles/checkers.dir/src/objects/BluePiece.cpp.o" \
-"CMakeFiles/checkers.dir/src/objects/RedPiece.cpp.o"
+"CMakeFiles/checkers.dir/src/objects/RedPiece.cpp.o" \
+"CMakeFiles/checkers.dir/src/objects/Selector.cpp.o"
 
 # External object files for target checkers
 checkers_EXTERNAL_OBJECTS =
@@ -185,11 +213,13 @@ checkers: CMakeFiles/checkers.dir/src/core/Engine.cpp.o
 checkers: CMakeFiles/checkers.dir/src/core/Object.cpp.o
 checkers: CMakeFiles/checkers.dir/src/core/System.cpp.o
 checkers: CMakeFiles/checkers.dir/src/core/Timer.cpp.o
+checkers: CMakeFiles/checkers.dir/src/objects/Piece.cpp.o
 checkers: CMakeFiles/checkers.dir/src/objects/BluePiece.cpp.o
 checkers: CMakeFiles/checkers.dir/src/objects/RedPiece.cpp.o
+checkers: CMakeFiles/checkers.dir/src/objects/Selector.cpp.o
 checkers: CMakeFiles/checkers.dir/build.make
 checkers: CMakeFiles/checkers.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/amirhosein/Documents/Dev/Game/Checkers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable checkers"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/amirhosein/Documents/Dev/Game/Checkers/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable checkers"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/checkers.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

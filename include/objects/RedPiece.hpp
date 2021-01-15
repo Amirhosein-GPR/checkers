@@ -1,9 +1,9 @@
 #ifndef REDPIECE_HPP
 #define REDPIECE_HPP
 
-#include "core/Object.hpp"
+#include "objects/Piece.hpp"
 
-class RedPiece : public Object
+class RedPiece : public Piece
 {
     public:
         RedPiece(Vector position, SDL_Renderer *renderer = nullptr, TTF_Font *font = nullptr);

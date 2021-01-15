@@ -10,7 +10,9 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/amirhosein/Documents/Dev/Game/Checkers/src/core/Timer.cpp" "/home/amirhosein/Documents/Dev/Game/Checkers/build/CMakeFiles/checkers.dir/src/core/Timer.cpp.o"
   "/home/amirhosein/Documents/Dev/Game/Checkers/src/main.cpp" "/home/amirhosein/Documents/Dev/Game/Checkers/build/CMakeFiles/checkers.dir/src/main.cpp.o"
   "/home/amirhosein/Documents/Dev/Game/Checkers/src/objects/BluePiece.cpp" "/home/amirhosein/Documents/Dev/Game/Checkers/build/CMakeFiles/checkers.dir/src/objects/BluePiece.cpp.o"
+  "/home/amirhosein/Documents/Dev/Game/Checkers/src/objects/Piece.cpp" "/home/amirhosein/Documents/Dev/Game/Checkers/build/CMakeFiles/checkers.dir/src/objects/Piece.cpp.o"
   "/home/amirhosein/Documents/Dev/Game/Checkers/src/objects/RedPiece.cpp" "/home/amirhosein/Documents/Dev/Game/Checkers/build/CMakeFiles/checkers.dir/src/objects/RedPiece.cpp.o"
+  "/home/amirhosein/Documents/Dev/Game/Checkers/src/objects/Selector.cpp" "/home/amirhosein/Documents/Dev/Game/Checkers/build/CMakeFiles/checkers.dir/src/objects/Selector.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

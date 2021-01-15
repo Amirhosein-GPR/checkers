@@ -5,7 +5,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/checkers.dir/src/core/Timer.cpp.o"
   "CMakeFiles/checkers.dir/src/main.cpp.o"
   "CMakeFiles/checkers.dir/src/objects/BluePiece.cpp.o"
+  "CMakeFiles/checkers.dir/src/objects/Piece.cpp.o"
   "CMakeFiles/checkers.dir/src/objects/RedPiece.cpp.o"
+  "CMakeFiles/checkers.dir/src/objects/Selector.cpp.o"
   "checkers"
   "checkers.pdb"
 )

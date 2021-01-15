@@ -33,8 +33,12 @@ class Object
         void setAcceleration(Vector acceleration);
         void setPosition(float x, float y);
         void setAlpha(Uint8 alpha);
+        void setBlockPosition(Uint8 blockPostion);
+        Vector getPositionEquvalant(Uint8 inputBlockPostion);
+        Uint8 getBlockPosition();
         void render(int delta);
         void animate(Vector position, int duration);
+        void animateBlockPosition(int blockPosition, int duration);
         void animate(Uint8 alpha, int duration, bool reverseLoop = false);
         int getWidth();
         int getHeight();
@@ -61,6 +65,7 @@ class Object
         Uint8 alpha;
         float alphaPerSecond;
         bool reverseLoop;
+        Uint8 blockPosition;
 };
 
 #endif
